@@ -1,2 +1,4 @@
 .claude
 configs/config.yaml
+.air.toml
+tmp/
