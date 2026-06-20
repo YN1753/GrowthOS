@@ -25,7 +25,7 @@ func JWTAuth(secret string) gin.HandlerFunc {
 		}
 		claims, err := utils.ParseToken(parts[1], secret)
 		if err != nil {
-			response.Fail(c, 401, "Token 无效或已过期")
+			response.Fail(c, 401, err.Error())
 			c.Abort()
 			return
 		}

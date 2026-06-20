@@ -23,6 +23,7 @@ func RouterInit(authHandler handler.AuthHandler) *gin.Engine {
 	private := r.Group("api/v1")
 	{
 		private.Use(middleware.JWTAuth(authHandler.JwtSecret))
+		private.GET("info", authHandler.GetInfo)
 	}
 	return r
 }
