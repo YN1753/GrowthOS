@@ -1,0 +1,16 @@
+server:
+  host: 0.0.0.0
+  port: 8080
+  mode: debug
+
+mysql:
+  host: localhost
+  port: 3306
+  username: root
+  password: 123456
+  database: growthos
+  charset: utf8mb4
+
+jwt:
+  secret: 818032fdb9a4e1b44fba2a81db42703e575da65741dc0522d69517df3b237a9c
+  expire_hour: 24
