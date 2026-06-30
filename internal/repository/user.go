@@ -3,16 +3,19 @@ package repository
 import (
 	"growthos/internal/model"
 
+	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
 )
 
 type UserRepository struct {
-	DB *gorm.DB
+	DB  *gorm.DB
+	Rdb *redis.Client
 }
 
-func NewUserRepository(db *gorm.DB) UserRepository {
+func NewUserRepository(db *gorm.DB, rdb *redis.Client) UserRepository {
 	return UserRepository{
-		DB: db,
+		DB:  db,
+		Rdb: rdb,
 	}
 }
 

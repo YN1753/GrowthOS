@@ -6,6 +6,7 @@ type Config struct {
 	Mysql  Mysql
 	Server Server
 	Jwt    Jwt
+	Redis  Redis
 }
 
 type Mysql struct {
@@ -24,6 +25,12 @@ type Server struct {
 type Jwt struct {
 	Secret     string `mapstructure:"secret"`
 	ExpireHour int    `mapstructure:"expire_hour"`
+}
+type Redis struct {
+	Host     string `mapstructure:"host"`
+	Port     int    `mapstructure:"port"`
+	Password string `mapstructure:"password"`
+	Database int    `mapstructure:"database"`
 }
 
 func ConfigInit() Config {

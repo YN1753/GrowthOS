@@ -14,3 +14,8 @@ mysql:
 jwt:
   secret: 818032fdb9a4e1b44fba2a81db42703e575da65741dc0522d69517df3b237a9c
   expire_hour: 24
+redis:
+  host: localhost
+  port: 6379
+  password: ""
+  database: 0
